@@ -8,7 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body bgcolor="cyan">
-	in show libri 
 	
 	<% 
 		Libro l = (Libro)request.getAttribute("libro");

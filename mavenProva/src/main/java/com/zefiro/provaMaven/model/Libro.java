@@ -6,7 +6,9 @@ public class Libro {
 	private String autore;
 	private String genere;
 	private String anno;
-	private int pagine;
+	private int isLibroOrCd;
+	private int quantita;
+	
 	public long getId() {
 		return id;
 	}
@@ -37,16 +39,31 @@ public class Libro {
 	public void setAnno(String anno) {
 		this.anno = anno;
 	}
-	public int getPagine() {
-		return pagine;
+
+	public int getIsLibroOrCd() {
+		return isLibroOrCd;
 	}
-	public void setPagine(int pagine) {
-		this.pagine = pagine;
+	public void setIsLibroOrCd(int isLibroOrCd) {
+		this.isLibroOrCd = isLibroOrCd;
 	}
+	public int getQuantita() {
+		return quantita;
+	}
+	public void setQuantita(int quantita) {
+		this.quantita = quantita;
+	}
+	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "Libro [id= " + id + ", titolo= " + titolo +", autore= " + autore + "]";
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append("Articolo: ");
+		sb.append(getTitolo());
+		sb.append(" by ");
+		sb.append(getAutore());
+		sb.append(". Quantità: ");
+		sb.append(getQuantita());
+		return sb.toString();
  	}
 	
 	

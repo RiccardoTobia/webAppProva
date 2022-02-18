@@ -18,9 +18,9 @@ public class LibroDao {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/biblioteca?user=root&password=@First254");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/libroocd?user=root&password=@First254");
 			Statement insert = connection.createStatement();
-			ResultSet rs = insert.executeQuery("select * from libro where id="+id);
+			ResultSet rs = insert.executeQuery("select * from campionario where id="+id);
 			
 			if(rs.next()) {
 				l.setId(rs.getInt("id"));
@@ -28,7 +28,8 @@ public class LibroDao {
 				l.setAutore(rs.getString("autore"));
 				l.setGenere(rs.getString("genere"));
 				l.setAnno(rs.getString("anno"));
-				l.setPagine(rs.getInt("pagine"));
+				l.setIsLibroOrCd(rs.getInt("isLibroOrCd"));
+				l.setQuantita(rs.getInt("quantita"));
 			}
 		} catch (Exception e) {
 			System.out.println(e);
