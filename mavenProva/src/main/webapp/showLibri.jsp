@@ -11,7 +11,12 @@
 	
 	<% 
 		Libro l = (Libro)request.getAttribute("libro");
-		out.println(l.toString());
+		
+		if(l == null){
+			out.println("ERRORE");
+		} else {		
+			out.println(l.toString());
+		}
 	%>
 </body>
 </html>
