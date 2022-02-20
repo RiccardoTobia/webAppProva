@@ -35,7 +35,7 @@ public class GetCdController extends HttpServlet {
 		Libro l = new Libro();
 		
 		try {
-			l = dao.getLibro(id);
+			l = dao.getCd(id);
 
 			request.setAttribute("cd", l);
 			
