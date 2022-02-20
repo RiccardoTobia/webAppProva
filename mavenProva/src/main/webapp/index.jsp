@@ -5,5 +5,10 @@
 		<input type="text" name="id">
 		<input type="submit"> 
 	</form>
+	
+	<form action="GetCd">
+		<input type="text" name="id">
+		<input type="submit">
+	</form>
 </body>
 </html>

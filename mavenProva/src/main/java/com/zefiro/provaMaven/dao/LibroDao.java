@@ -15,6 +15,7 @@ public class LibroDao {
 	
 	private Connection connection;
 	private PreparedStatement getLibroById;
+	private PreparedStatement getCdById;
 	
 	public Libro getLibro(int id) throws ClassNotFoundException {
 		Libro result = null;
@@ -45,6 +46,36 @@ public class LibroDao {
 		return result;
 	}
 
+	public Libro getCd(int id) throws ClassNotFoundException {
+		Libro result = null;
+		
+		
+		try {
+
+			getGetCdById().clearParameters();
+			getGetCdById().setInt(1, id);
+			ResultSet rs = getGetCdById().executeQuery();
+			
+			if(rs.next()) {
+				
+				result = new Libro();
+				
+				result.setId(rs.getInt("id"));
+				result.setTitolo(rs.getString("titolo"));
+				result.setAutore(rs.getString("autore"));
+				result.setGenere(rs.getString("genere"));
+				result.setAnno(rs.getString("anno"));
+				result.setIsLibroOrCd(rs.getInt("isLibroOrCd"));
+				result.setQuantita(rs.getInt("quantita"));
+			}
+		} catch (SQLException e) {
+			System.out.println(e);
+		}
+		
+		return result;
+	}
+	
+	
 	public Connection getConnection() throws SQLException {
 		if(connection == null) {
 			connection = DriverManager.getConnection(CONNECTION_STRING);
@@ -66,5 +97,16 @@ public class LibroDao {
 
 	public void setGetLibroById(PreparedStatement getLibroById) {
 		this.getLibroById = getLibroById;
+	}
+
+	public PreparedStatement getGetCdById() throws SQLException {
+		if(getCdById == null) {
+			getCdById = getConnection().prepareStatement("select * from campionario where id=? and isLibroOrCd=1");
+		}
+		return getCdById;
+	}
+
+	public void setGetCdById(PreparedStatement getCdById) {
+		this.getCdById = getCdById;
 	}
 }
