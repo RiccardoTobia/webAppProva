@@ -1,14 +1,10 @@
 <html>
 <body>
-<h2>Hello World!</h2>
-	<form action="GetLibro">
-		<input type="text" name="id">
-		<input type="submit"> 
-	</form>
-	
-	<form action="GetCd">
-		<input type="text" name="id">
-		<input type="submit">
-	</form>
+    <form name="TrainerMenu" action="TrainerMenu" method="get">
+
+       <h1>Benvenuto nel bellissimo sito del nostro negozio!</h1>
+       <a href="CatalogoLibri.jsp"><input type="button" value="I nostri libri"></a>
+       <a href="CatalogoCd.jsp"><input type="button" value="I nostri cd"></a>
+    </form>	
 </body>
 </html>
