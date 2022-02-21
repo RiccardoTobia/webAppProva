@@ -66,6 +66,13 @@ public class Libro {
 		return sb.toString();
  	}
 	
-	
+	public String presentazione() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Articolo: ");
+		sb.append(getTitolo());
+		sb.append(" by ");
+		sb.append(getAutore());
+		return sb.toString();		
+	}
 	
 }

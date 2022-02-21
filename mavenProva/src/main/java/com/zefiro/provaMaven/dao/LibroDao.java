@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.zefiro.provaMaven.model.Libro;
 
@@ -75,6 +77,37 @@ public class LibroDao {
 		return result;
 	}
 	
+	public List<Libro> getAll(){
+		
+		List<Libro> result = new ArrayList<Libro>();
+		
+		try {
+			ResultSet rs = getConnection().createStatement().executeQuery("select * from campionario");
+			
+			while(rs.next()) {
+				
+				Libro l = new Libro();
+				
+				l.setId(rs.getInt("id"));
+				l.setTitolo(rs.getString("titolo"));
+				l.setAutore(rs.getString("autore"));
+				l.setGenere(rs.getString("genere"));
+				l.setAnno(rs.getString("anno"));
+				l.setIsLibroOrCd(rs.getInt("isLibroOrCd"));
+				l.setQuantita(rs.getInt("quantita"));
+				
+				result.add(l);
+			}
+						
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return result;
+
+		
+	}
 	
 	public Connection getConnection() throws SQLException {
 		if(connection == null) {
