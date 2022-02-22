@@ -22,6 +22,18 @@
   	<description></description>
   	<servlet-class>com.zefiro.provaMaven.GetCdController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ListLibriController</servlet-name>
+  	<display-name>ListLibriController</display-name>
+  	<description></description>
+  	<servlet-class>com.zefiro.provaMaven.ListLibriController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ListCdController</servlet-name>
+  	<display-name>ListCdController</display-name>
+  	<description></description>
+  	<servlet-class>com.zefiro.provaMaven.ListCdController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>GetLibroController</servlet-name>
   	<url-pattern>/GetLibro</url-pattern>
@@ -33,5 +45,13 @@
   <servlet-mapping>
   	<servlet-name>NewGetCdController</servlet-name>
   	<url-pattern>/GetCd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ListLibriController</servlet-name>
+  	<url-pattern>/ListLibri</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ListCdController</servlet-name>
+  	<url-pattern>/ListCd</url-pattern>
   </servlet-mapping>
 </web-app>
