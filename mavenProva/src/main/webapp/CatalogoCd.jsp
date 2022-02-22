@@ -9,13 +9,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="GetCd">
-		<p>Id del cd da cercare:</p>
-		<input type="text" name="id">
-		<input type="submit">
-	</form>
 
-		<table>
+		<h1 style="text-align: center;"> ECCO I NOSTRI CD!</h1>
+
+		<table align="center" style="padding-top:10px">
 		<thead>
 			<tr>
 				<th style="width: 20em; border: 1px solid black;">Titolo</th>
@@ -45,5 +42,14 @@
 	
 		</tbody>
 	</table>
+	
+	<form action="GetCd">
+		<p>Id del cd da cercare:</p>
+		<input type="text" name="id">
+		<input type="submit">
+	</form>
+	
+	<a href="acquistaCd.jsp"><input type="button" value="acquista"></a>
+	
 </body>
 </html>

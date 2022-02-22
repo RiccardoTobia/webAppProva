@@ -9,13 +9,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="GetLibro">
-		<p>Id del libro da cercare:</p> 
-		<input type="text" name="id">
-		<input type="submit"> 
-	</form>
+
+	<h1 style="text-align: center;"> ECCO I NOSTRI LIBRI!</h1>
 	
-	<table>
+	<table align="center" style="padding-top:10px">
 		<thead>
 			<tr>
 				<th style="width: 20em; border: 1px solid black;">Titolo</th>
@@ -44,7 +41,17 @@
 		%>
 	
 		</tbody>
+	
 	</table>
-
+	
+	<form action="GetLibro">
+		<p>Id del libro da cercare:</p> 
+		<input type="text" name="id">
+		<input type="submit"> 
+	</form>
+	
+	<a href="acquistaLibri.jsp"><input type="button" value="acquista"></a>
+	
+	
 </body>
 </html>
