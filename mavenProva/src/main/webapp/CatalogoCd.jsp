@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 <%@page import="com.zefiro.provaMaven.model.Libro"%>
 <%@page import="com.zefiro.provaMaven.dao.LibroDao"%>
-=======
 <%@page import="java.util.List"%>
 <%@page import="com.zefiro.provaMaven.model.Libro"%>
->>>>>>> refs/remotes/origin/branch2
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -53,23 +51,6 @@
 		<input type="text" name="id">
 		<input type="submit">
 	</form>
-	
-<<<<<<< HEAD
-	<%
-		LibroDao dao = new LibroDao();
-		
-		for(Libro l : dao.getAll()){
-			if(l.getIsLibroOrCd() != 0){
-			out.println(l.presentazione());;				
-			}
-		}
-	
-	%>
-
-
-=======
-	<a href="acquistaCd.jsp"><input type="button" value="acquista"></a>
-	
->>>>>>> refs/remotes/origin/branch2
+		<a href="acquistaCd.jsp"><input type="button" value="acquista"></a>
 </body>
 </html>
