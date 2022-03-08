@@ -13,8 +13,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<<<<<<< HEAD
-=======
+
 
 	<h1 style="text-align: center;"> ECCO I NOSTRI LIBRI!</h1>
 	
@@ -50,14 +49,14 @@
 	
 	</table>
 	
->>>>>>> refs/remotes/origin/branch2
+
 	<form action="GetLibro">
 		<p>Id del libro da cercare:</p> 
 		<input type="text" name="id">
 		<input type="submit"> 
 	</form>
 	
-<<<<<<< HEAD
+
 	<%
 		LibroDao dao = new LibroDao();
 		
@@ -68,10 +67,7 @@
 		}
 	
 	%>
-=======
-	<a href="acquistaLibri.jsp"><input type="button" value="acquista"></a>
-	
->>>>>>> refs/remotes/origin/branch2
+
 	
 </body>
 </html>
