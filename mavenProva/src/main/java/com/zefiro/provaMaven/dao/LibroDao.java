@@ -77,6 +77,7 @@ public class LibroDao {
 		return result;
 	}
 	
+
 	public List<Libro> getAll(){
 		
 		List<Libro> result = new ArrayList<Libro>();
@@ -108,6 +109,7 @@ public class LibroDao {
 
 		
 	}
+
 	
 	public Connection getConnection() throws SQLException {
 		if(connection == null) {
