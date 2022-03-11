@@ -1,11 +1,9 @@
 <html>
 <body>
-    <form name="TrainerMenu" action="TrainerMenu" method="get">
-
-       <h1>Benvenuto nel bellissimo sito del nostro negozio!</h1>
-       <a href="ListLibri"><input type="button" action="ListLibri" value="I nostri libri"></a>
+    <form>
+       <a href="SezioneClient.jsp"><input type="button" value="clienti"></a>
        
-       <a href="ListCd"><input type="button" value="I nostri cd"></a>
+       <a href="SezioneStaff.jsp"><input type="button" value="staff"></a>
     </form>	
 </body>
 </html>

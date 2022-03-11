@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<h1 style="text-align: center;">LIBRI DISPONIBILI</h1>
+	<h1 style="text-align: center;">CD DISPONIBILI</h1>
 
 	<% 
 		LibroDao dao = new LibroDao();
